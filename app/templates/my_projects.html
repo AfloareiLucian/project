@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="title" content="Proiect Tehnologii Web Avansate și Arhitecturi Orientate pe Servicii">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Aplicație in Django-Python | CV personal">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css'%}" />
+
+    <title>Projects Afloarei Lucian</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <h1 class="headerText">My Projects</h1>
+        <a href="/" class="anchor-button">
+          <div class="button-wrapper">
+            <button type="button" class="button-class">
+              <span>Curriculum vitae</span>
+            </button>
+          </div>
+        </a>
+      </div>
+
+      <div class="site-main row">
+        <div class="site-main col">
+          {% for pr in projects %}
+          <div class="block-label">
+            <p class="textLabel">{{pr.projectName}}</p>
+          </div>
+          <div class="row info_container project_container">
+            <div class="col-4">
+              <img src="{{pr.projectImage.url}}" alt="project image" class="project_image" />
+            </div>
+            <div class="col">
+              <div class="h-100 d-flex justify-content-between flex-column">
+                <div>
+                  <p class="project_label">Project description</p>
+                  <p class="textLabel2">{{pr.projectDescription}}</p>
+                  <p class="project_label">Technologies used</p>
+                  <p class="textLabel2"> {{pr.projectTechnologies}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

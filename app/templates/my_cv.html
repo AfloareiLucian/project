@@ -1,0 +1,99 @@
+{% load bootstrap5 %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="title" content="Proiect Tehnologii Web Avansate și Arhitecturi Orientate pe Servicii">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Aplicație in Django-Python | CV personal">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css'%}" />
+
+    <title>CV Afloarei Lucian</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <h1 class="headerText">Curriculum Vitae {{person.firstName}} {{person.lastName}}</h1>
+          <a href="/projects" class="anchor-button">
+            <div class="button-wrapper">
+              <button type="button" class="button-class">
+                <span>More Info</span>
+              </button>
+            </div>
+          </a>
+      </div>
+      <div class="page-wrapper">
+        <div class="main-information">
+          <p class="main-title">Personal Info</p>
+          {% for cont in contacts %}
+          <div class="contact block shadow">
+            <div class="block-label">
+              <p class="textLabel">{{cont.contactType}}:</p>
+            </div>
+            <div class="block-text">
+              <p class="textLabel2">{{cont.contactDescription}}</p>
+            </div>
+          </div>
+          {%endfor %}
+          <p class="main-title">Education</p>
+          {% for edu in studies %}
+          <div class="education block shadow">
+            <div class="block-label">
+              <p class="textLabel"> {{edu.institutionName}}: </p>
+            </div>
+            <div class="block-text">
+              <p class="textLabel2"> Start date:{{edu.startDate}} </p>
+              <p class="textLabel2"> End date:{{edu.endDate}} </p>
+            </div>
+          </div>
+          {%endfor %}
+          <p class="main-title">Experience</p>
+          {% for exp in experience %}
+          <div class="experience block shadow">
+            <div class="block-label">
+              <p class="textLabel font-weight-bold"> {{exp.experienceName}}: </p>
+              <p class="textLabel italic"> {{exp.experienceDescription}} </p>
+            </div>
+            <div class="block-text">
+              <p class="textLabel2"> Start date:{{exp.startDate}} </p>
+              <p class="textLabel2"> End date:{{exp.endDate}} </p>
+            </div>
+          </div>
+          {%endfor %}
+          {% for info in information %}
+          <p class="main-title">{{info.infoName}}</p>
+          <div class="description block shadow">
+            <div class="block-label">
+              <p class="textLabel2 center"> {{info.infoDescription}} </p>
+            </div>
+          </div>
+          {%endfor %}
+          <p class="main-title">Spoken Languages</p>
+          {% for lang in languages %}
+          <div class="language block shadow">
+            <div class="block-label">
+              <p class="textLabel">{{lang.languageName}}:</p>
+            </div>
+            <div class="block-text">
+              <p class="textLabel2"> {{lang.languageLevel}} </p>
+            </div>
+          </div>
+          {%endfor %}
+          <p class="main-title">Awards</p>
+          {% for aw in awards %}
+          <div class="awards block shadow">
+            <div class="block-label">
+              <p class="textLabel font-weight-bold"> {{aw.awardName}}: </p>
+            </div>
+            <div class="block-text">
+              <p class="textLabel2"> {{aw.awardDescription}} </p>
+            </div>
+          </div>
+          {%endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+body {
+  background-color: honeydew;
+}
+
+.main {
+  padding: 70px;
+}
+
+.button-wrapper {
+    float: right;
+}
+
+.button-class {
+  border: 2px solid #526fa5;
+  color: #526fa5;
+  border-radius: 20px;
+  height: 40px;
+  padding: 0 30px;
+  font-weight: 700;
+  background-color: transparent;
+  display: inline-block;
+  line-height: 36px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.button-class:hover {
+  background-color: #526fa5;
+  cursor: pointer;
+}
+
+.button-class span {
+  color: #526fa5;
+}
+
+.button-class:hover span {
+  color: #fff;
+}
+
+.header {
+  display: inline-block;
+  width: 100%;
+}
+
+.page-wrapper {
+  display: block;
+}
+
+.block {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.block-label {
+  text-align: center;
+}
+
+#text2 {
+  color: red;
+  font-size: 200px;
+}
+
+.textLabel {
+  font-size: 30px;
+  color: #526fa5;
+  text-transform: capitalize;
+}
+
+.textLabel2 {
+  font-weight: bold;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.info_container {
+  border-width: 2px !important;
+  border-color: #64b6ac;
+  border-style: solid;
+  margin: 5px 0;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.project_container {
+  padding: 30px;
+}
+p {
+  margin: 0px !important;
+}
+
+.headerText {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  float: left;
+  margin-top: 0;
+}
+
+.project_label {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 26px;
+  color: #526fa5;
+  margin: 20px 0 !important;
+  text-shadow: 1px 1px rgba(107, 104, 104, 0.59);
+}
+
+.main-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: #526fa5;
+  margin: 20px 0 !important;
+  text-shadow: 1px 1px rgba(107, 104, 104, 0.59);
+}
+
+.main-title:before, .main-title:after {
+  content: "";
+  border-bottom: 3px solid slateblue;
+  width: 100%;
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.center {
+  text-align: center !important;
+}
+.project_image {
+  max-height: 600px;
+  width: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+  font-weight: bold !important;
+  all: unset;
+}
+
+.link_button {
+  min-width: 50%;
+  border-radius: 20px !important;
+  display: block;
+  margin: 20px auto;
+}
+
+.page_link {
+  background-color: #64b6ac !important;
+  height: 40px;
+  border-radius: 10px !important;
+  width: 100%;
+}
